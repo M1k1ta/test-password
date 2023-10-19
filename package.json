@@ -1,6 +1,7 @@
 {
   "name": "test-password",
   "version": "0.1.0",
+  "homepage": "https://m1k1ta.github.io/test-password",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -21,6 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "scss": "sass --watch src/index.scss public/index.css"
   },
   "eslintConfig": {
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
