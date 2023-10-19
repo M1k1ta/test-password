@@ -5,20 +5,19 @@ export const PasswordTest: React.FC = () => {
   const [password, setPassword] = useState('');
   const [passwordStrength, setPasswordStrength] = useState(0);
 
-  const onPasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
-    onCheckPasswordStrength(event.target.value);
+  const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setPasswordStrength(getPasswordStrength(event.target.value));
     setPassword(event.target.value);
   }
 
-  const onCheckPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: string) => {
     let strength = 0;
     const leters = /[A-Za-z]/;
     const numbers = /\d/;
     const symbols = /[^A-Za-z0-9]/;
 
     if (password.length < 8 && password.length > 0) {
-      setPasswordStrength(-1);
-      return;
+      return -1;
     }
 
     if (leters.test(password)) {
@@ -33,7 +32,7 @@ export const PasswordTest: React.FC = () => {
       strength++;
     }
 
-    setPasswordStrength(strength);
+    return strength;
   }
 
   return (
@@ -45,7 +44,7 @@ export const PasswordTest: React.FC = () => {
           className='password-test__input'
           type='password'
           value={password}
-          onChange={onPasswordChange}
+          onChange={handlePasswordChange}
         >
         </input>
       </label>

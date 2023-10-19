@@ -1,5 +1,5 @@
 import React from 'react';
-import { PasswordTest } from './components/PasswordTest';
+import { PasswordTest } from '../PasswordTest';
 
 export const App: React.FC = () => {
   return (
