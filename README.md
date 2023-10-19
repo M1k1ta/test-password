@@ -2,10 +2,10 @@
 
 [DEMO](https://M1k1ta.github.io/test-password)
 
-#Task:
+# Task:
 Create applications to test password strength.
 
-#The essence of the assignment:
+# The essence of the assignment:
 Create a field for entering a password, under the field add 3 sections which will show the strength of the password;
 Changes in password strength must take place in real time;
 How to calculate the strength of a password:
