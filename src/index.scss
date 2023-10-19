@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+@import './App.scss';
+@import './components/PasswordTest/PasswordTest.scss'
